@@ -7,7 +7,6 @@
     <packaging>pom</packaging>
     <modules>
         <module>mdb-shared</module>
-        <module>mdb-web</module>
     <module>mdb-email</module>
     <module>mdb-cartcredit</module>
   </modules>
