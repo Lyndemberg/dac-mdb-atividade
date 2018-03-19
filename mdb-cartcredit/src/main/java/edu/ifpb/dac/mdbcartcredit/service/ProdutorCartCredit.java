@@ -12,7 +12,6 @@ import javax.inject.Inject;
 import javax.jms.JMSContext;
 import javax.jms.JMSDestinationDefinition;
 import javax.jms.JMSProducer;
-import javax.jms.Message;
 import javax.jms.Queue;
 
 /**
@@ -27,7 +26,7 @@ import javax.jms.Queue;
 
 @Stateless
 public class ProdutorCartCredit {
-    
+
     @Resource(lookup = "java:global/jms/queueProcessamento")
     private Queue fila;
 
@@ -36,7 +35,7 @@ public class ProdutorCartCredit {
 
     public void enviar(RespostaProcessamento respostaProcessamento) {
         JMSProducer createProducer = context.createProducer();
-        createProducer.send(fila, (Message) respostaProcessamento);
+        createProducer.send(fila, respostaProcessamento);
     }
 
 }
