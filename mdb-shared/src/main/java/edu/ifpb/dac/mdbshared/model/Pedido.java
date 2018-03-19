@@ -59,5 +59,10 @@ public class Pedido implements Serializable {
         this.cliente = cliente;
     }
 
+    @Override
+    public String toString() {
+        return "Pedido{" + "id=" + id + ", produtos=" + produtos + ", cliente=" + cliente + '}';
+    }
+
     
 }
