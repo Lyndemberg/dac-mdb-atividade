@@ -1,6 +1,7 @@
 package edu.ifpb.dac.mdbshared.model;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Entity;
@@ -61,8 +62,16 @@ public class Pedido implements Serializable {
 
     @Override
     public String toString() {
-        return "Pedido{" + "id=" + id + ", produtos=" + produtos + ", cliente=" + cliente + '}';
+        return "Pedido{" + "id=" + id + ", produtos=" + produtos 
+                + ", cliente=" + cliente + '}';
     }
-
+    
+    public BigDecimal getValorTotal(){
+        BigDecimal total = new BigDecimal(0);
+        for(Produto produto : this.produtos){
+            total.add(produto.getPreco());
+        }
+        return total;
+    }
     
 }

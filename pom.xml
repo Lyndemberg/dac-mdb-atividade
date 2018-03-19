@@ -7,10 +7,10 @@
     <packaging>pom</packaging>
     <modules>
         <module>mdb-shared</module>
-    <module>mdb-email</module>
-    <module>mdb-cartcredit</module>
-    <module>mdb-web</module>
-  </modules>
+        <module>mdb-email</module>
+        <module>mdb-web</module>
+        <module>mdb-cartcredit</module>
+    </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>

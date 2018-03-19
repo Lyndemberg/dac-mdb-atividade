@@ -7,9 +7,9 @@
     <version>1.0</version>
   </parent>
 
-    <groupId>edu.ifpb.dac</groupId>
+    <groupId>com.mycompany</groupId>
     <artifactId>mdb-cartcredit</artifactId>
-    <version>1.0</version>
+    <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
     <name>mdb-cartcredit</name>
@@ -21,8 +21,13 @@
     
     <dependencies>
         <dependency>
+            <groupId>edu.ifpb.dac</groupId>
+            <artifactId>mdb-shared</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
             <groupId>javax</groupId>
-            <artifactId>javaee-web-api</artifactId>
+            <artifactId>javaee-api</artifactId>
             <version>7.0</version>
             <scope>provided</scope>
         </dependency>
