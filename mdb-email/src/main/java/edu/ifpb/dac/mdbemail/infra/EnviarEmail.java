@@ -1,6 +1,7 @@
 package edu.ifpb.dac.mdbemail.infra;
 
 import edu.ifpb.dac.mdbshared.model.Pedido;
+import edu.ifpb.dac.mdbshared.model.RespostaProcessamento;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.annotation.PostConstruct;
@@ -40,8 +41,16 @@ public class EnviarEmail {
             Logger.getLogger(EnviarEmail.class.getName()).log(Level.SEVERE, null, ex);
         }   
     }
-    public void sendProcessamento(){
-        
+    public void sendProcessamento(RespostaProcessamento resposta){
+        try {
+            email.setFrom(EMAIL);
+            email.addTo(resposta.getEmailUser());
+            email.setMsg("Seu pedido com código: " + resposta.getCodPedido() + " foi processado. "
+                    + "Veja o resultado: "+resposta.getMensagem());      
+            email.send();
+        } catch (EmailException ex) {
+            Logger.getLogger(EnviarEmail.class.getName()).log(Level.SEVERE, null, ex);
+        }   
     }
     
     

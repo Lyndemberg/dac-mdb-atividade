@@ -40,7 +40,7 @@ public class ConsumerFinalizacao implements MessageListener {
         try {
             Pedido pedido = message.getBody(Pedido.class);
             BigDecimal valorCompra = pedido.getValorTotal();
-            RespostaProcessamento rp = new RespostaProcessamento(pedido.getId());
+            RespostaProcessamento rp = new RespostaProcessamento(pedido.getId(),pedido.getCliente().getEmail());
             
             if (new CartCredit().fazerPagamento(valorCompra)) {
                 rp.setMensagem("Pagamento do Pedido Confirmado!");
