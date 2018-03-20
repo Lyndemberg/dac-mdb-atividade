@@ -9,10 +9,14 @@ import java.util.List;
 import javax.ejb.Remote;
 import javax.ejb.Remove;
 import javax.ejb.Stateful;
+import javax.inject.Inject;
 
 @Stateful
 @Remote(Carrinho.class)
 public class CarrinhoOnline implements Carrinho {
+    
+    @Inject
+    private EnviarFinalizacao finalizacao;
     
     private final Pedido pedido = new Pedido();
     
@@ -39,7 +43,7 @@ public class CarrinhoOnline implements Carrinho {
     @Remove
     @Override
     public void finalizarCompra() {
-        new EnviarFinalizacao().enviar(pedido);
+        finalizacao.enviar(pedido);
     }
     
 }
