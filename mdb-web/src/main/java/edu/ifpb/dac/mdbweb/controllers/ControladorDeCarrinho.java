@@ -1,4 +1,4 @@
-package edu.ifpb.dac.mdbweb.jms.controller;
+package edu.ifpb.dac.mdbweb.controllers;
 
 import edu.ifpb.dac.mdbshared.model.Cliente;
 import edu.ifpb.dac.mdbshared.model.Produto;
