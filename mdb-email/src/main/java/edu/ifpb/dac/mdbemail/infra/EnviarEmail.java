@@ -41,6 +41,7 @@ public class EnviarEmail {
             Logger.getLogger(EnviarEmail.class.getName()).log(Level.SEVERE, null, ex);
         }   
     }
+    
     public void sendProcessamento(RespostaProcessamento resposta){
         try {
             email.setFrom(EMAIL);
