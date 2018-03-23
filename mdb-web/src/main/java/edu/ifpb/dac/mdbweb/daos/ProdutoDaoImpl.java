@@ -11,6 +11,8 @@ import edu.ifpb.dac.mdbshared.service.ProdutoDao;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import javax.ejb.Local;
+import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
@@ -19,6 +21,8 @@ import javax.persistence.TypedQuery;
  *
  * @author romulo
  */
+@Stateless
+@Local(ProdutoDao.class)
 public class ProdutoDaoImpl implements ProdutoDao {
 
     @PersistenceContext(unitName = "mdb")
@@ -33,6 +37,12 @@ public class ProdutoDaoImpl implements ProdutoDao {
             return new ArrayList<>();
         }
         return query.getResultList();
+    }
+
+    @Override
+    public Produto buscarPorId(int id) {
+        Produto produto = entityManager.find(Produto.class, id);
+        return produto;
     }
 
 }

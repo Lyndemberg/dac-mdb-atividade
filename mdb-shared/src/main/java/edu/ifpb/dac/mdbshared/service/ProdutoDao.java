@@ -15,5 +15,6 @@ import java.util.List;
 public interface ProdutoDao {
 
     public List<Produto> getListProducts();
+    public Produto buscarPorId(int id);
 
 }

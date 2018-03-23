@@ -7,6 +7,8 @@ package edu.ifpb.dac.mdbweb.daos;
 
 import edu.ifpb.dac.mdbshared.model.Pedido;
 import edu.ifpb.dac.mdbshared.service.PedidoDao;
+import javax.ejb.Local;
+import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
@@ -14,6 +16,8 @@ import javax.persistence.PersistenceContext;
  *
  * @author romulo
  */
+@Stateless
+@Local(PedidoDao.class)
 public class PedidoDaoImpl implements PedidoDao {
 
     @PersistenceContext(unitName = "mdb")

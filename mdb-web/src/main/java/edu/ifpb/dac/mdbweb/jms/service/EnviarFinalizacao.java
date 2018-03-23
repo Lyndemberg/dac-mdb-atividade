@@ -15,12 +15,6 @@ import javax.jms.Topic;
  * @author lyndemberg
  */
 
-@JMSDestinationDefinition(
-        name = "java:global/jms/TopicFinalizacao",
-        interfaceName = "javax.jms.Topic",
-        resourceAdapter = "jmsra",
-        destinationName = "TopicFinalizacao"
-)
 @Stateless
 public class EnviarFinalizacao {
     @Resource(lookup = "java:global/jms/TopicFinalizacao")

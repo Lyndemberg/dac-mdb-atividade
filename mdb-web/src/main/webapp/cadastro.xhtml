@@ -21,8 +21,8 @@
                     <h:form>
                         <div class="input-field">
                             <i class="material-icons prefix">person_pin</i>
-                            <h:inputText id="username" value="#{controladorCadastro.cliente.nome}" required="true"/>
-                            <label for="username">Username</label>
+                            <h:inputText id="nome" value="#{controladorCadastro.cliente.nome}" required="true"/>
+                            <label for="nome">Nome</label>
                         </div>
                         <div class="input-field">
                             <i class="material-icons prefix">email</i>
@@ -33,6 +33,18 @@
                             <i class="material-icons prefix">lock</i>
                             <h:inputSecret id="senha" value="#{controladorCadastro.cliente.senha}" required="true"/>
                             <label for="senha">Senha</label>
+                        </div>
+                        <br/>
+                        <h:messages class="red-text" />
+                        <div class="row">
+                            
+                                <h:commandButton value="Salvar" 
+                                             class="col l5 offset-l1 waves-effect waves-light btn btn-large indigo" 
+                                             action="#{controladorCadastro.cadastrar()}" />                        
+                            
+                            
+                                <a href="index.xhtml" class="col l5 offset-l1 waves-effect waves-light btn btn-large grey">Cancelar</a>
+                            
                         </div>
                     </h:form>
                 </div>

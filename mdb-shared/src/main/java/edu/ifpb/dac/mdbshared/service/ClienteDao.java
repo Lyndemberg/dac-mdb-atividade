@@ -17,4 +17,5 @@ public interface ClienteDao {
 
     public Cliente autenticarCliente(String email, String senha);
 
+    public boolean clienteExiste(String email);
 }

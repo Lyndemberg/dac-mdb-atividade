@@ -5,6 +5,7 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
@@ -17,6 +18,7 @@ import javax.persistence.OneToMany;
 public class Pedido implements Serializable {
 
     @Id
+    @GeneratedValue
     private int id;
 
     @OneToMany
@@ -69,7 +71,8 @@ public class Pedido implements Serializable {
     public BigDecimal getValorTotal(){
         BigDecimal total = new BigDecimal(0);
         for(Produto produto : this.produtos){
-            total.add(produto.getPreco());
+            
+            total = total.add(produto.getPreco());
         }
         return total;
     }

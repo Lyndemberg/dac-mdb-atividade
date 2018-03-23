@@ -1,13 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package edu.ifpb.dac.mdbweb.daos;
 
 import edu.ifpb.dac.mdbshared.model.Cliente;
 import edu.ifpb.dac.mdbshared.service.ClienteDao;
 import java.util.Optional;
+import javax.ejb.Local;
+import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
@@ -16,6 +13,8 @@ import javax.persistence.TypedQuery;
  *
  * @author romulo
  */
+@Stateless
+@Local(ClienteDao.class)
 public class ClienteDaoImpl implements ClienteDao {
 
     @PersistenceContext(unitName = "mdb")
@@ -46,6 +45,15 @@ public class ClienteDaoImpl implements ClienteDao {
         } else {
             return null;
         }
+    }
+
+    @Override
+    public boolean clienteExiste(String email) {
+        TypedQuery<Cliente> query = entityManager.
+                createQuery("SELECT c FROM Cliente c WHERE c.email=:email",Cliente.class);
+        query.setParameter("email", email);
+        Optional<Cliente> cliente = query.getResultList().stream().findFirst();
+        return cliente.isPresent();
     }
 
 }

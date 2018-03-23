@@ -18,15 +18,10 @@ import javax.jms.Queue;
  *
  * @author romulo
  */
-@JMSDestinationDefinition(
-        name = "java:global/jms/queueProcessamento",
-        interfaceName = "javax.jms.Queue",
-        resourceAdapter = "jmsra",
-        destinationName = "queueProcessamento")
 
 @Stateless
 public class ProdutorCartCredit {
-
+    
     @Resource(lookup = "java:global/jms/queueProcessamento")
     private Queue fila;
 

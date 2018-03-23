@@ -1,3 +1,11 @@
-/home/romulo/Atividades-DAC/atividade-avaliativa1/dac-mdb-atividade/mdb-web/src/main/java/edu/ifpb/dac/mdbweb/jms/service/CarrinhoOnline.java
-/home/romulo/Atividades-DAC/atividade-avaliativa1/dac-mdb-atividade/mdb-web/src/main/java/edu/ifpb/dac/mdbweb/jms/controller/ControladorDeCarrinho.java
-/home/romulo/Atividades-DAC/atividade-avaliativa1/dac-mdb-atividade/mdb-web/src/main/java/edu/ifpb/dac/mdbweb/jms/service/EnviarFinalizacao.java
+/home/lyndemberg/NetBeansProjects/dac-mdb-atividade/mdb-web/src/main/java/edu/ifpb/dac/mdbweb/jms/service/CarrinhoOnline.java
+/home/lyndemberg/NetBeansProjects/dac-mdb-atividade/mdb-web/src/main/java/edu/ifpb/dac/mdbweb/controllers/ControladorCliente.java
+/home/lyndemberg/NetBeansProjects/dac-mdb-atividade/mdb-web/src/main/java/edu/ifpb/dac/mdbweb/controllers/ControladorCadastro.java
+/home/lyndemberg/NetBeansProjects/dac-mdb-atividade/mdb-web/src/main/java/edu/ifpb/dac/mdbweb/controllers/ControladorProduto.java
+/home/lyndemberg/NetBeansProjects/dac-mdb-atividade/mdb-web/src/main/java/edu/ifpb/dac/mdbweb/daos/ProdutoDaoImpl.java
+/home/lyndemberg/NetBeansProjects/dac-mdb-atividade/mdb-web/src/main/java/edu/ifpb/dac/mdbweb/daos/PedidoDaoImpl.java
+/home/lyndemberg/NetBeansProjects/dac-mdb-atividade/mdb-web/src/main/java/edu/ifpb/dac/mdbweb/daos/ClienteDaoImpl.java
+/home/lyndemberg/NetBeansProjects/dac-mdb-atividade/mdb-web/src/main/java/edu/ifpb/dac/mdbweb/filters/FiltroSessao.java
+/home/lyndemberg/NetBeansProjects/dac-mdb-atividade/mdb-web/src/main/java/edu/ifpb/dac/mdbweb/jms/init/IniciarJMS.java
+/home/lyndemberg/NetBeansProjects/dac-mdb-atividade/mdb-web/src/main/java/edu/ifpb/dac/mdbweb/controllers/ControladorDeCarrinho.java
+/home/lyndemberg/NetBeansProjects/dac-mdb-atividade/mdb-web/src/main/java/edu/ifpb/dac/mdbweb/jms/service/EnviarFinalizacao.java

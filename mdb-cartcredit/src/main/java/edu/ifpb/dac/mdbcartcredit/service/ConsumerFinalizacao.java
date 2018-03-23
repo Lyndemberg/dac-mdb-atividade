@@ -8,6 +8,7 @@ package edu.ifpb.dac.mdbcartcredit.service;
 import edu.ifpb.dac.mdbshared.model.CartCredit;
 import edu.ifpb.dac.mdbshared.model.Pedido;
 import edu.ifpb.dac.mdbshared.model.RespostaProcessamento;
+import edu.ifpb.dac.mdbshared.service.PedidoDao;
 import java.math.BigDecimal;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -34,16 +35,17 @@ public class ConsumerFinalizacao implements MessageListener {
     
     @Inject
     private ProdutorCartCredit produtor;
+    @Inject
+    private PedidoDao pedidoDao;
     
     @Override
     public void onMessage(Message message) {
         try {
             Pedido pedido = message.getBody(Pedido.class);
             BigDecimal valorCompra = pedido.getValorTotal();
-            RespostaProcessamento rp = new RespostaProcessamento(
-                    pedido.getId(),pedido.getCliente().getEmail());
-            
+            RespostaProcessamento rp = new RespostaProcessamento(pedido.getCliente().getEmail());
             if (new CartCredit().fazerPagamento(valorCompra)) {
+                pedidoDao.cadastrarPedido(pedido);
                 rp.setMensagem("Pagamento do Pedido Confirmado!");
             } else {
                 rp.setMensagem("Não há saldo para o Pagamento!");

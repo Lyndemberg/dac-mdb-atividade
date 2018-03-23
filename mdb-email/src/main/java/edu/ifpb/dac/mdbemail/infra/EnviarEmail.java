@@ -6,6 +6,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.annotation.PostConstruct;
 import javax.ejb.Stateless;
+import javax.mail.internet.MimeMultipart;
 import org.apache.commons.mail.DefaultAuthenticator;
 import org.apache.commons.mail.Email;
 import org.apache.commons.mail.EmailException;
@@ -34,7 +35,7 @@ public class EnviarEmail {
             email.setFrom(EMAIL);
             email.addTo(p.getCliente().getEmail());
             email.setMsg("Pedido finalizado, veja os dados:"
-            + "Código->" + p.getId() + "Produto(s)->" + p.getProdutos().toString()
+            + "Produto(s)->" + p.getProdutos().toString()+" Cliente: " + p.getCliente().getNome()
             );      
             email.send();
         } catch (EmailException ex) {
@@ -46,7 +47,7 @@ public class EnviarEmail {
         try {
             email.setFrom(EMAIL);
             email.addTo(resposta.getEmailUser());
-            email.setMsg("Seu pedido com código: " + resposta.getCodPedido() + " foi processado. "
+            email.setMsg("Seu pedido foi processado. "
                     + "Veja o resultado: "+resposta.getMensagem());      
             email.send();
         } catch (EmailException ex) {

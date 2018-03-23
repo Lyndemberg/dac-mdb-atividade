@@ -17,6 +17,13 @@ public class RespostaProcessamento implements Serializable {
     private String mensagem;
     private int codPedido;
 
+    public RespostaProcessamento() {
+    }
+
+    public RespostaProcessamento(String emailUser) {
+        this.emailUser = emailUser;
+    }
+
     public RespostaProcessamento(String mensagem, int codPedido, String emailUser) {
         this.mensagem = mensagem;
         this.codPedido = codPedido;
