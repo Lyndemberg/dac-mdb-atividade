@@ -5,12 +5,10 @@
  */
 package edu.ifpb.dac.mdbweb.daos;
 
-import edu.ifpb.dac.mdbshared.model.Cliente;
 import edu.ifpb.dac.mdbshared.model.Produto;
 import edu.ifpb.dac.mdbshared.service.ProdutoDao;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 import javax.ejb.Local;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
@@ -27,7 +25,7 @@ public class ProdutoDaoImpl implements ProdutoDao {
 
     @PersistenceContext(unitName = "mdb")
     EntityManager entityManager;
-
+    
     @Override
     public List<Produto> getListProducts() {
         String querySql = "SELECT p FROM Produto p ";

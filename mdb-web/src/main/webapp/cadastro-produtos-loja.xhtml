@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:jsf="http://xmlns.jcp.org/jsf">
+    <h:head>
+        <!--Import Google Icon Font-->
+        <link href="css/material-icons.css" rel="stylesheet"/>
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Loja</title>
+    </h:head>
+    <h:body>
+        <div class="navbar-fixed">
+            <nav>
+                <div class="nav-wrapper indigo">
+                    <a href="#" class="brand-logo center">ObaBoa</a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="container">
+            <br/>
+            <div class="row">
+                <div class="col l6 offset-l3">
+                    <br><center><h5>Cadastro Produtos Loja</h5></center></br>
+                    <h:form>
+                        <div class="row">
+                            <div class="col l10">
+                                <h:outputText value="Insira a descrição do produto:"/> 
+                                <h:inputText value="#{controladorProdutoLoja.produto.descricao}" required="true" requiredMessage="*Preencha o campo Descrição"/>
+                                <h:outputText value="Insira o preço do produto:"/> 
+                                <h:inputText value="#{controladorProdutoLoja.produto.preco}" required="true" requiredMessage="*Preencha o campo Preço"/>
+                            </div>
+                            <div class="col l2">
+                                <h:commandLink class="btn-floating btn-large waves-effect waves-light green"
+                                               action="#{controladorProdutoLoja.addList()}">
+                                    <i class="material-icons">add</i>
+                                </h:commandLink>
+                            </div>
+                        </div>
+                    </h:form>
+                    <h:messages errorClass="red-text"/>
+                    <h:dataTable value="#{controladorProdutoLoja.produtos}" var="produto">
+                        <h:column>
+                            <div class="row">
+                                <div class="col l8">
+                                    #{produto.descricao}    
+                                </div>
+                                <div class="col l2">
+                                    R$ #{produto.preco}
+                                </div>
+                                <div class="col l2">
+                                    <h:form>
+                                        <h:commandLink action="#{controladorProdutoLoja.removeList(produto)}"
+                                                       class="btn-floating btn-flat waves-effect waves-light red">
+                                            <i class="material-icons">clear</i>
+                                        </h:commandLink>
+                                    </h:form>
+                                </div>
+                            </div>  
+                        </h:column>
+                    </h:dataTable>
+                    <h:form>
+                        <h:commandLink class="waves-effect waves-light btn-large indigo"
+                                       action="#{controladorProdutoLoja.addBanco()}">
+                            <!--<i class="material-icons left">save</i>Cadastrar Lista-->
+                            <i class="material-icons left">queue</i>Cadastrar Lista
+                        </h:commandLink>                        
+                    </h:form>
+                </div>
+                <!--                <div class="col l6">
+                                    <center><h5>Produto em destaque</h5></center>
+                                </div>-->
+            </div>
+        </div>
+
+        <!--Import jQuery before materialize.js-->
+        <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('select').material_select();
+            });
+        </script>
+    </h:body>
+</html>

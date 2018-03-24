@@ -6,7 +6,6 @@ import javax.annotation.Resource;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.jms.JMSContext;
-import javax.jms.JMSDestinationDefinition;
 import javax.jms.JMSProducer;
 import javax.jms.Topic;
 

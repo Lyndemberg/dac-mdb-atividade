@@ -25,11 +25,6 @@ public class ClienteDaoImpl implements ClienteDao {
         entityManager.persist(cliente);
     }
 
-//    //tratar erro de restrição de chave
-//    public void removerCliente(int idCliente) {
-//        Cliente cliente = entityManager.find(Cliente.class, idCliente);
-//        entityManager.remove(cliente);
-//    }
     @Override
     public Cliente autenticarCliente(String email, String senha) {
         String querySql = "SELECT c FROM Cliente c WHERE c.email= :email "

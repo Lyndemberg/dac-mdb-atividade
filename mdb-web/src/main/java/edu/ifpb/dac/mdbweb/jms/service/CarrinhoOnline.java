@@ -7,7 +7,6 @@ import edu.ifpb.dac.mdbshared.service.Carrinho;
 import java.util.Collections;
 import java.util.List;
 import javax.ejb.Local;
-import javax.ejb.Remote;
 import javax.ejb.Remove;
 import javax.ejb.Stateful;
 import javax.inject.Inject;
