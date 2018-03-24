@@ -28,15 +28,15 @@ public class ControladorDeCarrinho implements Serializable {
     @Inject
     private ProdutoDao produtoDao;
     private Cliente cliente;
-    
+
     @PostConstruct
-    public void init(){
+    public void init() {
         ExternalContext externalContext = FacesContext.getCurrentInstance().getExternalContext();
         HttpSession sessao = (HttpSession) externalContext.getSession(false);
         cliente = (Cliente) sessao.getAttribute("cliente");
         this.carrinho.setCliente(cliente);
     }
-    
+
     public String add() {
         Produto recuperado = produtoDao.buscarPorId(produto.getId());
         this.carrinho.adicionarProduto(recuperado);
@@ -50,7 +50,7 @@ public class ControladorDeCarrinho implements Serializable {
     }
 
     public String finalizarCompra() {
-        
+
         this.carrinho.finalizarCompra();
         try {
             //QUANDO O @REMOVE DO STATEFUL É CHAMADO, 
@@ -67,10 +67,10 @@ public class ControladorDeCarrinho implements Serializable {
     public List<Produto> todosOsProdutos() {
         return this.carrinho.listarProdutos();
     }
-    
+
     private void encerrarSessao() {
         ExternalContext externalContext = FacesContext.getCurrentInstance().getExternalContext();
-        
+
         externalContext.invalidateSession();
     }
 

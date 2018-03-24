@@ -70,8 +70,7 @@ public class Pedido implements Serializable {
     
     public BigDecimal getValorTotal(){
         BigDecimal total = new BigDecimal(0);
-        for(Produto produto : this.produtos){
-            
+        for(Produto produto : produtos){
             total = total.add(produto.getPreco());
         }
         return total;

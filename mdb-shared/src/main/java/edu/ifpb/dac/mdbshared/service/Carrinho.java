@@ -15,5 +15,5 @@ public interface Carrinho {
     public void setCliente(Cliente cliente);
 
     public void finalizarCompra();
-
+    
 }

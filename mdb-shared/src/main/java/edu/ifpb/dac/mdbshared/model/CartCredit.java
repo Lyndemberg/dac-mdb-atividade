@@ -12,7 +12,7 @@ import java.math.BigDecimal;
  * @author romulo
  */
 public class CartCredit {
-    
+
     private BigDecimal saldo;
 
     public CartCredit() {
@@ -26,10 +26,11 @@ public class CartCredit {
     public void setSaldo(BigDecimal saldo) {
         this.saldo = saldo;
     }
-    
+
     public boolean fazerPagamento(BigDecimal valorCompra) {
         if (this.getSaldo().compareTo(valorCompra) != -1) {
-            this.setSaldo(this.getSaldo().subtract(valorCompra));
+            BigDecimal saldoAtual = this.getSaldo();
+            this.setSaldo(saldoAtual.subtract(valorCompra));
             return true;
         }
         return false;
