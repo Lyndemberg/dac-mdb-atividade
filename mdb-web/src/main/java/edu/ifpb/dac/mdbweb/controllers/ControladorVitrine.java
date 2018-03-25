@@ -27,7 +27,7 @@ public class ControladorVitrine implements Serializable {
     
     @PostConstruct
     public void init() {
-        productFeatured = searchScheduledProduct.getProdutoDestaque();
+        productFeatured = searchScheduledProduct.getProductFeatured();
     }
     
     public String getProductFeatured() {

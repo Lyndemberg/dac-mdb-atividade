@@ -24,7 +24,7 @@ public class SearchScheduledProductImpl {
     @PersistenceContext(unitName = "mdb")
     EntityManager entityManager;
     
-    private String produtoDestaque;
+    private String productFeatured;
 
     //Funciona
     private Produto searchProductScheduledById(int idProduct) {
@@ -62,7 +62,7 @@ public class SearchScheduledProductImpl {
         System.out.println("Produto Destaque É: " 
                 + searchProductScheduledById(idRandom).getDescricao());
         
-        this.setProdutoDestaque(searchProductScheduledById(idRandom).getDescricao());
+        this.setProductFeatured(searchProductScheduledById(idRandom).getDescricao());
         
     }
 
@@ -77,12 +77,12 @@ public class SearchScheduledProductImpl {
         return produto.isPresent();
     }
 
-    public String getProdutoDestaque() {
-        return produtoDestaque;
+    public String getProductFeatured() {
+        return productFeatured;
     }
 
-    public void setProdutoDestaque(String produtoDestaque) {
-        this.produtoDestaque = produtoDestaque;
+    public void setProductFeatured(String productFeatured) {
+        this.productFeatured = productFeatured;
     }
 
 }
