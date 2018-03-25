@@ -9,7 +9,6 @@ import edu.ifpb.dac.mdbweb.service.SearchScheduledProductImpl;
 import java.io.Serializable;
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.RequestScoped;
-import javax.enterprise.context.SessionScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
@@ -30,7 +29,7 @@ public class ControladorVitrine implements Serializable {
     public void init() {
         productFeatured = searchScheduledProduct.getProdutoDestaque();
     }
-
+    
     public String getProductFeatured() {
         return productFeatured;
     }
