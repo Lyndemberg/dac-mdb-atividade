@@ -18,12 +18,12 @@
     <h:body>
         <div class="navbar-fixed">
             <nav>
-              <div class="nav-wrapper indigo">
-                <a href="#" class="brand-logo center">ObaBoa</a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <div class="nav-wrapper indigo">
+                    <a href="#" class="brand-logo center">ObaBoa</a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
 
-                </ul>
-              </div>
+                    </ul>
+                </div>
             </nav>
         </div>
         <div class="container">
@@ -53,26 +53,26 @@
                         </div>
                     </h:form>
                     <h:messages errorClass="red-text"/>
-                        <h:dataTable value="#{controladorDeCarrinho.todosOsProdutos()}" var="produto">
-                            <h:column>
-                                <div class="row">
-                                    <div class="col l8">
-                                        #{produto.descricao}    
-                                    </div>
-                                    <div class="col l2">
-                                        R$ #{produto.preco}
-                                    </div>
-                                    <div class="col l2">
-                                        <h:form>
-                                            <h:commandLink action="#{controladorDeCarrinho.remove(produto)}"
-                                                class="btn-floating btn-flat waves-effect waves-light red">
-                                                <i class="material-icons">clear</i>
-                                            </h:commandLink>
-                                        </h:form>
-                                    </div>
-                                </div>  
-                            </h:column>
-                        </h:dataTable>
+                    <h:dataTable value="#{controladorDeCarrinho.todosOsProdutos()}" var="produto">
+                        <h:column>
+                            <div class="row">
+                                <div class="col l8">
+                                    #{produto.descricao}    
+                                </div>
+                                <div class="col l2">
+                                    R$ #{produto.preco}
+                                </div>
+                                <div class="col l2">
+                                    <h:form>
+                                        <h:commandLink action="#{controladorDeCarrinho.remove(produto)}"
+                                                       class="btn-floating btn-flat waves-effect waves-light red">
+                                            <i class="material-icons">clear</i>
+                                        </h:commandLink>
+                                    </h:form>
+                                </div>
+                            </div>  
+                        </h:column>
+                    </h:dataTable>
                     <h:form>
                         <h:commandLink class="waves-effect waves-light btn-large indigo"
                                        action="#{controladorDeCarrinho.finalizarCompra()}">
@@ -82,18 +82,18 @@
                 </div>
                 <div class="col l6">
                     <center><h5>Produto em destaque</h5></center>
+                    <center>
+                        <h:outputText value="#{controladorVitrine.productFeatured}"/>
+                    </center>
                 </div>
-            
-                
             </div>
         </div>
-        
-        
+
         <!--Import jQuery before materialize.js-->
         <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
         <script type="text/javascript" src="js/materialize.min.js"></script>
         <script type="text/javascript">
-            $(document).ready(function() {
+            $(document).ready(function () {
                 $('select').material_select();
             });
         </script>

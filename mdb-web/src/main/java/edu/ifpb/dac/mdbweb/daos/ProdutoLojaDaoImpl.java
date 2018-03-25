@@ -42,8 +42,4 @@ public class ProdutoLojaDaoImpl implements ProdutoLojaDao {
         return produto.isPresent();
     }
 
-//    @Override
-//    public void removerProduto(Produto Produto) {
-//        entityManager.remove(Produto);
-//    }
 }
