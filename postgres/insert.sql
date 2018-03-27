@@ -1,4 +1,5 @@
-INSERT INTO produto(id, descricao, preco) VALUES (1, 'Mesa', 200);
-INSERT INTO produto(id, descricao, preco) VALUES (2, 'Geladeira', 250);
-INSERT INTO produto(id, descricao, preco) VALUES (3, 'TV', 300);
-INSERT INTO produto(id, descricao, preco) VALUES (4, 'Notebook', 400);
+INSERT INTO produto(id, descricao, preco) VALUES (36, 'Liga de Baladeira', 3);
+INSERT INTO produto(id, descricao, preco) VALUES (45, 'Bornó Jeans', 15);
+INSERT INTO produto(id, descricao, preco) VALUES (49, 'Cambito Inteiro', 2);
+INSERT INTO produto(id, descricao, preco) VALUES (57, 'Baladeira Feita', 3);
+/*Por efeito de falta de tempo, os ids possuem valores "gambiarráicos"*/

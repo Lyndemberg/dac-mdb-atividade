@@ -7,9 +7,12 @@ package edu.ifpb.dac.mdbweb.daos;
 
 import edu.ifpb.dac.mdbshared.model.Produto;
 import edu.ifpb.dac.mdbshared.service.ProdutoDao;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
+import javax.annotation.PostConstruct;
 import javax.ejb.Local;
+import javax.ejb.Startup;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
