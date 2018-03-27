@@ -6,7 +6,7 @@
 
 Instruções para Implantação 
 
-> 1. Execute o arquivo ``sh`` "run.sh" no terminal
+> 1. Execute o arquivo ``sh`` **run.sh** no terminal
 
 > 2. Espere o processo de construção e execução das imagens e dos containers
 
@@ -18,4 +18,6 @@ Instruções para Implantação
 
 Instruções para Desimplantação 
 
-> 1. Execute o arquivo ``sh`` "kill.sh" no terminal
+> 1. Execute o arquivo ``sh`` **kill.sh** no terminal
+
+**OBS: A vitrine não está sendo atualizada automaticamente. Está sendo atualizada a cada requisição**
