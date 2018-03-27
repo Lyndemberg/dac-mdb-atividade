@@ -14,10 +14,8 @@ Instruções para Implantação
 
 > 4. Acesse a ``URL`` [Página Inicial do ObaBoa](http://localhost:8082/mdb-web/index.xhtml) para Página Inical do Sistema. 
 
-> 4. Acesse a ``URL`` [Página De Cadastro Produtos Loja Obaboa](http://localhost:8082/mdb-web/cadastro-produtos-loja.xhtml) para Página de Cadastro de Produtos da loja para o Admin do Sistema.
+> 4. Acesse a ``URL`` [Página Cadastro de Produtos Loja Obaboa](http://localhost:8082/mdb-web/cadastro-produtos-loja.xhtml) para Página de Cadastro de Produtos da loja para o Admin do Sistema.
 
 Instruções para Desimplantação 
 
 > 1. Execute o arquivo ``sh`` **kill.sh** no terminal
-
-**OBS: A vitrine não está sendo atualizada automaticamente. Está sendo atualizada a cada requisição**
