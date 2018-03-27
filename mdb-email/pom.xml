@@ -86,6 +86,9 @@
                 </executions>
             </plugin>
         </plugins>
+        
+        <finalName>mdb-email</finalName>
+        
     </build>
 
 </project>

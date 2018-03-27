@@ -6,7 +6,7 @@
     <property name="User" value="postgres"/>
     <!--<property name="Password" value="pgadmin"/>-->
     <property name="Password" value="postgres"/>
-    <property name="URL" value="jdbc:postgresql://localhost:5432/mdb-atividade"/>
+    <property name="URL" value="jdbc:postgresql://host-banco:5432/mdb-atividade"/>
     <property name="driverClass" value="org.postgresql.Driver"/>
   </jdbc-connection-pool>
   <jdbc-resource enabled="true" jndi-name="java:app/jdbc/mdb-cart" object-type="user" pool-name="pool-cart"/>

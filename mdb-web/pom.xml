@@ -108,6 +108,7 @@
                 </executions>
             </plugin>
         </plugins>
+        <finalName>mdb-web</finalName>
     </build>
 
 </project>

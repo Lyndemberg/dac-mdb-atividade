@@ -27,6 +27,8 @@
             <artifactId>postgresql</artifactId>
             <version>9.4.1209.jre7</version>
         </dependency>
-        
     </dependencies>
+        <build>
+            <finalName>mdb-shared</finalName>
+        </build>
 </project>

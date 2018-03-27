@@ -25,7 +25,7 @@
                           steady-pool-size="8" 
                           validate-atmost-once-period-in-seconds="0" wrap-jdbc-objects="false">
         <property name="portNumber" value="5432"/>
-        <property name="URL" value="jdbc:postgresql://localhost:5432/mdb-atividade"/>
+        <property name="URL" value="jdbc:postgresql://host-banco:5432/mdb-atividade"/>
         <property name="User" value="postgres"/>
         <!--<property name="Password" value="pgadmin"/>-->
         <property name="Password" value="postgres"/>

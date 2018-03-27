@@ -92,6 +92,9 @@
                 </executions>
             </plugin>
         </plugins>
+        
+        <finalName>mdb-cartcredit</finalName>
+        
     </build>
 
 </project>
