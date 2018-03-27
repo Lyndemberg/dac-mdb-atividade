@@ -16,7 +16,7 @@ import javax.jms.Topic;
 
 @Stateless
 public class EnviarFinalizacao {
-    @Resource(lookup = "java:global/jms/TopicFinalizacao")
+    @Resource(lookup = "jms/TopicFinalizacao")
     private Topic topico;
     @Inject
     private JMSContext context;

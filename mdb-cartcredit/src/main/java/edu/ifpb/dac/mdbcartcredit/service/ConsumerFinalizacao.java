@@ -24,7 +24,7 @@ import javax.jms.MessageListener;
  * @author romulo
  */
 @MessageDriven(
-        mappedName = "java:global/jms/TopicFinalizacao",
+        mappedName = "jms/TopicFinalizacao",
         activationConfig = {
             @ActivationConfigProperty(propertyName = "destinationType", propertyValue = "javax.jms.Topic")
             ,

@@ -14,21 +14,20 @@ import javax.jms.JMSDestinationDefinitions;
  *
  * @author lyndemberg
  */
-
-@JMSDestinationDefinitions(value = {
-    @JMSDestinationDefinition(
-        name = "java:global/jms/TopicFinalizacao",
-        interfaceName = "javax.jms.Topic",
-        resourceAdapter = "jmsra",
-        destinationName = "TopicFinalizacao"
-    ),
-    @JMSDestinationDefinition(
-        name = "java:global/jms/queueProcessamento",
-        interfaceName = "javax.jms.Queue",
-        resourceAdapter = "jmsra",
-        destinationName = "queueProcessamento")
-
-})
+//@JMSDestinationDefinitions(value = {
+//    @JMSDestinationDefinition(
+//        name = "java:global/jms/TopicFinalizacao",
+//        interfaceName = "javax.jms.Topic",
+//        resourceAdapter = "jmsra",
+//        destinationName = "TopicFinalizacao"
+//    ),
+//    @JMSDestinationDefinition(
+//        name = "java:global/jms/queueProcessamento",
+//        interfaceName = "javax.jms.Queue",
+//        resourceAdapter = "jmsra",
+//        destinationName = "queueProcessamento")
+//
+//})
 @Singleton
 @Startup
 public class IniciarJMS {

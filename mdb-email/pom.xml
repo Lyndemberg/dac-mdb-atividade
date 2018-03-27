@@ -39,6 +39,7 @@
     </dependencies>
 
     <build>
+        <finalName>mdb-email</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -87,7 +88,6 @@
             </plugin>
         </plugins>
         
-        <finalName>mdb-email</finalName>
         
     </build>
 

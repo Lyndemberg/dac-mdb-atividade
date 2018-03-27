@@ -17,7 +17,7 @@ import javax.jms.MessageListener;
  * @author lyndemberg
  */
 @MessageDriven(
-        mappedName = "java:global/jms/queueProcessamento",
+        mappedName = "jms/queueProcessamento",
         activationConfig = {
             @ActivationConfigProperty(propertyName = "destinationType", propertyValue = "javax.jms.Queue"),
             @ActivationConfigProperty(propertyName = "destinationName", propertyValue = "queueProcessamento"),

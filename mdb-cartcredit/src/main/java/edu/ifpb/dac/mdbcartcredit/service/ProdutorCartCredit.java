@@ -21,7 +21,7 @@ import javax.jms.Queue;
 @Stateless
 public class ProdutorCartCredit {
     
-    @Resource(lookup = "java:global/jms/queueProcessamento")
+    @Resource(lookup = "jms/queueProcessamento")
     private Queue fila;
 
     @Inject
